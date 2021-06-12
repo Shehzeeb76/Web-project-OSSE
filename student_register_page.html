@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Tutormeet-Student_register_page</title>
+        <style>
+             h1
+           {
+              color: deepskyblue;
+              font-family: "Times New Roman", Times, serif;
+              font-style: normal;
+               font-size:6vw
+           }
+             input
+            {
+                align-self: auto;
+                width:30%;
+                height: 8%;
+                font-family: "Times New Roman",Times, serif;
+                color: darkblue;  
+                font-size: 28;
+            }
+            input:hover
+       {
+           background-color:lightblue; 
+           color: blue;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+       }
+            select
+            {
+                align-self: auto;
+                width:30%;
+                height: 8%;
+                font-family: "Times New Roman",Times, serif;
+                color: darkblue;  
+                font-size: 28;
+                background-color: dodgerblue;
+            }
+            select:hover
+       {
+           background-color:lightblue; 
+           color: blue;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+       }
+            ::placeholder { 
+              color:blue;
+            font-size: 28;
+            }
+            .floating-label-field {
+              border-width: 0;
+              color: rgba(#2c3e50, .75);
+              &:focus {
+                outline: 0;
+                box-shadow: 0;
+              }
+
+              &::placeholder {
+                color: transparent;
+              }
+            }
+            .floating-label-field {
+                          &,
+                          & + .floating-label {
+                            line-height: 1;
+                            font: inherit;
+                            padding: 1.5em;
+                            height: 4em;
+                          }
+                        }
+                        .floating-label-field {
+              border-bottom: 3px solid rgba(white, .05);
+              background-color: transparent;
+              color: rgba(white, .75);
+            }
+            label{
+                color: blue;
+                 font-family: "Times New Roman", Times, serif;
+            }
+        </style>
+        <script>
+           
+        </script>
+    </head>
+    <body>
+        <header><h1 align="center">Tutormeet-Student Registration</h1></header>
+        <div style="background-color: dodgerblue">
+            <p style="font-family:Times New Roman; color:darkblue;font-size:32;margin-left: 35%;">Enter Your Details:</p>
+            <form method="post" action="file1.php">
+                <label>Name:</label><label style="margin-left:29%">Class:</label><label style="margin-left:28.8%">Gender:</label>
+                <br>
+                <input type="text" class="floating-label-field floating-label-field--s3" name="stu_name" required/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number"  class="floating-label-field floating-label-field--s3" min="1" max="12" name="stu_standard" required />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="stu_gender" class="floating-label-field floating-label-field--s3">
+                    <option value="boy">Boy</option>
+                    <option value="girl">Girl</option>
+                </select>
+                <br><br><br>
+                <label>Location:</label><label style="margin-left:27%">Phone no:</label><label style="margin-left:26.8%">DOB:</label>
+                <br>
+                <input type="text" class="floating-label-field floating-label-field--s3" name="stu_location"/ required>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel"  class="floating-label-field floating-label-field--s3" pattern="^\d{10}$" name="stu_phone" required/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="date"  class="floating-label-field floating-label-field--s3" name="stu_dob" required />
+                <br><br><br>
+                <label>Email:</label><label style="margin-left:29%">Password:</label><label style="margin-left:26.8%">Confirm password:</label>
+                <input type="email" class="floating-label-field floating-label-field--s3" name="stu_email" required>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password"  class="floating-label-field floating-label-field--s3" name="stu_pass" pattern=".{6,}" required/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="password"  class="floating-label-field floating-label-field--s3" name="stu_compass" pattern=".{6,}" required />
+                <br><br><br>
+                <input type="Submit" value="Submit" class="floating-label-field floating-label-field--s3">
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset" class="floating-label-field floating-label-field--s3">
+                &nbsp;&nbsp;&nbsp;
+                <input type="button" value="Back" class="floating-label-field floating-label-field--s3" onclick="window.location.href='student_login_page.html'">
+                <br><br>
+                
+            </form>
+        </div>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+        <script defer src="./init-firebase.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

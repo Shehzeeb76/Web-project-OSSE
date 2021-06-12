@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Tutormeet-Student_login_page</title>
+        <style>
+           h1
+           {
+              color: deepskyblue;
+              font-family: "Times New Roman", Times, serif;
+              font-style: normal;
+               font-size:6vw
+           }
+            input
+            {
+                align-self: auto;
+                margin-left:35%;
+                width:30%;
+                height: 8%;
+                font-family: "Times New Roman",Times, serif;
+                color: darkblue;  
+                font-size: 28;
+            }
+            input:hover
+       {
+           background-color:lightblue; 
+           color: blue;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+       }
+            ::placeholder { 
+              color:blue;
+            font-size: 28;
+            }
+            a
+            {
+                align-self: auto;
+                margin-left:37%;
+                font-family: "Times New Roman",Times, serif;
+                color: darkblue;  
+                font-size: 28;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1 align="center">Tutormeet-Student Login</h1></header>
+        <form action="stu_login.php" method="post">
+        <div style="background-color: dodgerblue">
+            <p style="font-family:Times New Roman; color:darkblue;font-size:32;margin-left: 31%;">Enter your username and password:</p>
+            <input type="email" placeholder="username/email" name="stu_email1" required/>
+            <br><br>
+            <input type="password" placeholder="password" name="stu_pass1" required/>
+            <br><br>
+            <input style="background-color: darkblue;color: white" type="Submit" value="Login">
+            <br><br>
+            <input type="button" value="Back" style="background-color: darkblue;color: white" onclick="window.location.href='1st_page.html';"/>
+            <br><br>
+            <a href="student_register_page.html">New Register?Click here.</a>
+            <br><br>
+        </div>
+        </form>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        <script defer src="./init-firebase.js"></script>
+        <script type="text/javascript" src="index2.js"></script>
+    </body>
+</html>

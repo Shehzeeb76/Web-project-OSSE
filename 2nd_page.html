@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Tutormeet-Admin_login_page</title>
+        <style>
+           h1
+           {
+              color: deepskyblue;
+              font-family: "Times New Roman", Times, serif;
+              font-style: normal;
+               font-size:6vw
+           }
+            input
+            {
+                align-self: auto;
+                margin-left:35%;
+                width:30%;
+                height: 8%;
+                font-family: "Times New Roman",Times, serif;
+                color: darkblue;  
+                font-size: 28;
+            }
+            input:hover
+       {
+           background-color:lightblue; 
+           color: blue;
+           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+       }
+            ::placeholder { 
+              color:blue;
+            font-size: 28;
+            }
+        </style>
+        <script>
+  function login1()
+  {
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("pass").value;
+    if(username=='admin'&& password=='admin123')
+    {
+      window.alert("Sucessfull");
+      window.location.href='3rd_page.html';
+    }
+    else
+    {
+      window.alert("Unsucessfull");
+      window.location.href='2nd_page.html';
+
+    }
+  }
+</script>
+    </head>
+    <body>
+        <header><h1 align="center">Tutormeet-Admin Login</h1></header>
+        <form>
+        <div style="background-color: dodgerblue">
+            <input id="username" style="margin-top: 10%;" type="text" placeholder="username" />
+            <br><br>
+            <input id="pass" type="password" placeholder="password" />
+            <br><br>
+            <input style="background-color: darkblue;color: white" type="button" value="Login" onclick="login1()">
+            <br><br>
+            <input type="button" value="Back" style="background-color: darkblue;color: white" onclick="window.location.href='1st_page.html';"/>
+            <br><br><br><br>
+        </div>
+        </form>
+     </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+</html>
