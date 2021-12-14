@@ -16,16 +16,16 @@
                 width:30%;
                 height: 8%;
                 font-family: "Times New Roman",Times, serif;
-                color: darkblue;  
+                color: darkblue;
                 font-size: 28;
             }
             input:hover
        {
-           background-color:lightblue; 
+           background-color:lightblue;
            color: blue;
            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
        }
-            ::placeholder { 
+            ::placeholder {
               color:blue;
             font-size: 28;
             }
@@ -34,21 +34,21 @@
                 align-self: auto;
                 margin-left:37%;
                 font-family: "Times New Roman",Times, serif;
-                color: darkblue;  
+                color: darkblue;
                 font-size: 28;
             }
         </style>
     </head>
     <body>
         <header><h1 align="center">Tutormeet-Student Login</h1></header>
-        <form action="stu_login.php" method="post">
+        <form method="post">
         <div style="background-color: dodgerblue">
             <p style="font-family:Times New Roman; color:darkblue;font-size:32;margin-left: 31%;">Enter your username and password:</p>
-            <input type="email" placeholder="username/email" name="stu_email1" required/>
+            <input type="email" placeholder="username/email" name="stu_email1" id ="email" required/>
             <br><br>
-            <input type="password" placeholder="password" name="stu_pass1" required/>
+            <input type="password" placeholder="password" name="stu_pass1" id ="pass" required/>
             <br><br>
-            <input style="background-color: darkblue;color: white" type="Submit" value="Login">
+            <input style="background-color: darkblue;color: white" type="button" value="Login" onclick="studentLogin()">
             <br><br>
             <input type="button" value="Back" style="background-color: darkblue;color: white" onclick="window.location.href='1st_page.html';"/>
             <br><br>
@@ -56,10 +56,18 @@
             <br><br>
         </div>
         </form>
-        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
-        <script defer src="./init-firebase.js"></script>
-        <script type="text/javascript" src="index2.js"></script>
+        <script>
+               function studentLogin() {
+                var email = document.getElementById("email").value;
+                var pass = document.getElementById("pass").value;
+                if (email === "student@gmail.com" && pass === "student1") {
+                  alert("Login Successfully");
+                  location.replace("student_view_page.html");
+                } else {
+                  alert("password/email does not match");
+                  location.replace("student_Login_page.html");
+                }
+              }
+        </script>
     </body>
 </html>
