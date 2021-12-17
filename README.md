@@ -7,3 +7,9 @@ Student:
 A student can login or register themself in the application. On logging in to the student portal, a student can view the details of various tutors such as tutor name, subject handled, availability, contact and email.
 Tutor:
 A tutor can login or register themself in the application. A tutor can view the list of students he/she needs to teach after logging in. The tutor can see details such as name, class, location, contact and email.
+
+## Contributors
+
+- Deviprasad D Mahale
+- Shehzeeb
+- Damini Niranjan
