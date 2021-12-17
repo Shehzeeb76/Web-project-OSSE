@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Tutormeet-Tutor-Info</title>
+        <style>
+             h1
+           {
+              color: deepskyblue;
+              font-family: "Times New Roman", Times, serif;
+              font-style: normal;
+               font-size:6vw
+           }
+                         .sidebar {
+              margin: 0;
+              padding: 0;
+              width: 200px;
+              background-color:blue;
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+
+            /* Sidebar links */
+            .sidebar a {
+              display: block;
+              color: white;
+              padding: 16px;
+              text-decoration: none;
+              font-family: "Times New Roman", Times, serif;
+            }
+
+            /* Active/current link */
+            .sidebar a.active {
+              background-color:blue;
+              color: white;
+            }
+
+            /* Links on mouse-over */
+            .sidebar a:hover:not(.active) {
+              background-color:blue;
+              color: white;
+            }
+
+            /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+            div.content {
+              margin-left: 200px;
+              padding: 1px 16px;
+              height: 1000px;
+            }
+
+            /* On screens that are less than 700px wide, make the sidebar into a topbar */
+            @media screen and (max-width: 700px) {
+              .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+              }
+              .sidebar a {float: left;}
+              div.content {margin-left: 0;}
+            }
+
+            /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+            @media screen and (max-width: 400px) {
+              .sidebar a {
+                text-align: center;
+                float: none;
+              }
+            }
+        </style>
+    </head>
+    <body>
+            <header><h1 align="center">Tutormeet-Student Info</h1></header>
+        <div class="sidebar" style="background-color: dodgerblue">
+          <a href="3rd_page.html">Home</a>
+          <a class="active" href="view_student_info.html" >Student Details</a>
+          <!-- <a href="update_profile.php">Upade Profile</a> -->
+          <a href="2nd_page.html">Logout</a>
+        </div>
+        <table style='font-family:Times New Roman; color:darkblue;font-size:18;margin-left:23%;' border='2'>
+            <tr style='color:black;font-size:20;'>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Location</th>
+                <th>Contact Number</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <th>Abhi</th>
+                <th>Class 2</th>
+                <th>Bengaluru</th>
+                <th>712398412</th>
+                <th>abhi@gamil.com</th>
+            </tr>
+            <tr>
+                <th>Sagar</th>
+                <th>Class 4</th>
+                <th>Mysuru</th>
+                <th>984213983</th>
+                <th>sagar@gamil.com</th>
+            </tr>
+            <tr>
+                <th>Shobha</th>
+                <th>Class 8</th>
+                <th>Bengaluru</th>
+                <th>873381292</th>
+                <th>shobha@gamil.com</th>
+            </tr>
+            <tr>
+                <th>Krishna</th>
+                <th>Class 9</th>
+                <th>Bengaluru</th>
+                <th>891743921</th>
+                <th>Krishna@gamil.com</th>
+            </tr>
+        </table>
+    </body>
+</html>
