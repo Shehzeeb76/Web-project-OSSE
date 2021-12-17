@@ -1,215 +1,243 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Tutormeet</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-      h1
-       {
-          color: deepskyblue;
-          font-family: "Times New Roman", Times, serif;
-          font-style: normal;
-           font-size:6vw
-       }
-       button
-       {
-            background-color:dodgerblue; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            float: left;
-            align-items: center;
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      h2 {
+        color: deepskyblue;
+        font-family: "Times New Roman", Times, serif;
+        font-style: normal;
+        font-size: 3vw;
+      }
 
-       }
-        button:hover
-       {
-           background-color: blue; /* Green */
-           color: white;
-           box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-       }
-        p
-       {
-          color: darkblue;
-          font-family: "Times New Roman", Times, serif;
-          font-style: normal;
-          font-size: 36;
-       }
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+      button {
+        background-color: dodgerblue; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        float: left;
+        align-items: center;
+      }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 40%;
-  position: relative;
-  margin: auto;
-}
+      button:hover {
+        background-color: blue; /* Green */
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+      p {
+        color: darkblue;
+        font-family: "Times New Roman", Times, serif;
+        font-style: normal;
+        font-size: 36;
+      }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+      }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15;
-  padding: 8% 12%;
-  position: absolute;
-  bottom: 8%;
-  width: 100%;
-  text-align: center;
-}
+      .mySlides {
+        display: none;
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12;
-  padding: 8% 12%;
-  position: absolute;
-  top: 0;
-}
+      img {
+        vertical-align: middle;
+        height: 350px;
+      }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 40%;
+        position: relative;
+        margin: auto;
+      }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
 
-.main-container {
-      float: left;
-      position: relative;
-      left: 50%;
-    }
-    .fixer-container {
-      float: left;
-      position: relative;
-      left: -66%;
-    }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15;
+        padding: 8% 12%;
+        position: absolute;
+        bottom: 8%;
+        width: 100%;
+        text-align: center;
+      }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12;
+        padding: 8% 12%;
+        position: absolute;
+        top: 0;
+      }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
-</head>
-<body>
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .main-container {
+        float: left;
+        position: relative;
+        left: 50%;
+      }
+
+      .fixer-container {
+        float: left;
+        position: relative;
+        left: -66%;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <h1 align="center">Tutormeet</h1>
+      <h2 align="center">Tutormeet</h2>
     </header>
-    <div class = "main-container">
+    <div class="main-container">
       <div class="fixer-container">
         <button style="margin-left: 270px">HOME PAGE</button>
         <button onclick="window.location.href='2nd_page.html';">ADMIN</button>
-        <button onclick="window.location.href='student_login_page.html';">STUDENT</button>
-        <button onclick="window.location.href='tutor_Login_page.html';">TUTOR</button>
+        <button onclick="window.location.href='student_login_page.html';">
+          STUDENT
+        </button>
+        <button onclick="window.location.href='tutor_Login_page.html';">
+          TUTOR
+        </button>
       </div>
     </div>
 
-<div style="background-color: dodgerblue">
-    <br><br><br>
-<div class="slideshow-container">
+    <div style="background-color: dodgerblue">
+      <br /><br /><br />
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images.png" style="width: 100%" />
+        </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="images.png" style="width:100%">
-</div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images1.png" style="width: 100%" />
+        </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="images1.png" style="width:100%">
-</div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images2.png" style="width: 100%" />
+        </div>
+      </div>
+      <br />
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images2.png" style="width:100%">
-</div>
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </body>
 
-</div>
-<br>
+  <script>
+    var slideIndex = 0;
+    showSlides();
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-</div>
-
-</body>
-
-    <script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-
-
-
-
-}
-</script>
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
 </html>
